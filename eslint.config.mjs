@@ -5,12 +5,12 @@ import stylisticJs from '@stylistic/eslint-plugin-js'
 export default [
   { files: ['**/*.js'], languageOptions: { sourceType: 'commonjs' } },
   { languageOptions: { globals: globals.node } },
+  { ignores: ['dist'] },
   pluginJs.configs.recommended,
   {
     plugins: {
       '@stylistic/js': stylisticJs
     },
-    ignores: ['dist', 'node_modules'],
 
     rules: {
       '@stylistic/js/indent': [
